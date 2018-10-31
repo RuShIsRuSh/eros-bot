@@ -131,7 +131,7 @@ class InfoCommand extends Command {
         .replace(/(?:\[{2}).*?(?:\]{2})/g, '');
     };
 
-    const info = parseInfo(sanitisedData(rawData));
+    const { general: info } = parseInfo(sanitisedData(rawData));
     info.name = info.name.replace(/(?:\[)(.+)(?:\])/g, '($1)');
 
     return info;

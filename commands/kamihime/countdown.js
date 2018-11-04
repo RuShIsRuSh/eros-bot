@@ -268,7 +268,7 @@ class CountdownCommand extends Command {
 
       if (!Array.isArray(names)) continue;
 
-      embed.addField(`${this.getCountdown(date)} — ${date.format('YYYY/MM/DD HH:mm')} PDT`, names.map(n => `❯ ${n}`).join('\n'));
+      embed.addField(`${this.getCountdown(date)} — ${date.format('YYYY/MM/DD HH:mm')} PST`, names.map(n => `❯ ${n}`).join('\n'));
     }
 
     return message.util.edit({ embed });
